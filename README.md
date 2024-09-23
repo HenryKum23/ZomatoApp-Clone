@@ -1,7 +1,3 @@
-Sure! Here’s a marked-up version of your documentary for deploying the ZomatoApp-Clone on an EC2 instance:
-
----
-
 # Deploying ZomatoApp-Clone on EC2 Instance with Docker
 
 ## Prerequisites
