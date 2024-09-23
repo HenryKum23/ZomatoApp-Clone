@@ -1,72 +1,67 @@
-# Getting Started with Create React App
+Sure! Here’s a marked-up version of your documentary for deploying the ZomatoApp-Clone on an EC2 instance:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Deploying ZomatoApp-Clone on EC2 Instance
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+1. **Create AWS Account**  
+   I already have an AWS account and won’t be creating a new one.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Create a DockerHub Account**  
+   I already have a DockerHub account and won’t be creating a new one.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Create a GitHub Account**  
+   I already have GitHub and won’t be creating a new one.
 
-### `npm test`
+4. **Download a Code Editor**  
+   Download Visual Studio Code or another code editor.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment Process
 
-### `npm run build`
+1. **Launch an EC2 Instance on AWS**  
+   Start by launching a new EC2 instance in your AWS console.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Update and Upgrade the Ubuntu Server**  
+   After launching, run the following command to update and upgrade your Ubuntu server:
+   ```bash
+   sudo apt update && sudo apt upgrade -y
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Download and Install Docker**  
+   Follow the appropriate instructions to install Docker on your EC2 instance.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Clone the Source Code**  
+   Use the following command to clone your source code repository:
+   ```bash
+   git clone https://github.com/HenryKum23/ZomatoApp-Clone.git
+   ```
 
-### `npm run eject`
+5. **Create the Dockerfile**  
+   In the directory where the cloned source code is located, create a Dockerfile.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+6. **Build the Application Images**  
+   Build the application images with this command:
+   ```bash
+   docker build -t <name-you-want-to-give-the-image> .
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+7. **Run the Container**  
+   Once the image has been built, run it as a container and expose the container to the public using the following command:
+   ```bash
+   docker run --name <container-name> -p <browser-port>:<container-port> <image-name>
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+8. **Access the ZomatoApp**  
+   Once the previous step is successful, access your ZomatoApp in the browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributions
+For any contributions, do not hesitate to contact me.
 
-## Learn More
+https://github.com/HenryKum23/ZomatoApp-Clone
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Thank you!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+--- 
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Zomato-Clone
-# Zomato_Docker
